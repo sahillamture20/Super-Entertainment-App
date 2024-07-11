@@ -6,6 +6,7 @@ import Movies from './Pages/Movies'
 import NotFound from './Pages/NotFound'
 import Browse from './Pages/Browse'
 import Dashboard from './Pages/Dashboard'
+import "./index.css"
  
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,8 +14,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={ <Home/> } />
         <Route path="/movies" element={ <Movies/> } />
-        <Route path="/browse" element={ <Browse/> } />
         <Route path="/dashboard" element={ <Dashboard /> } />
+        <Route path="/browse" element={ <Browse/> } />
         <Route path="/*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>

@@ -8,25 +8,19 @@ function Box({ data, selectedMovies, setSelectedMovies }) {
       setSelectedMovies([...selectedMovies, data.id]);
     }
   }
-  console.log(selectedMovies);
+
   return (
-    <div
+    <div className="flex flex-col p-1 m-1 w-40 h-36 rounded-xl"
       style={{
         border: selectedMovies.includes(data.id)
-          ? "2px solid green"
-          : "2px solid black",
-        padding: "10px",
-        margin: "10px",
-        width: "200px",
-        height: "200px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: selectedMovies.includes(data.id) ? 'lightgreen' : 'white'
+          ? "4px solid green"
+          : "",
+        backgroundColor: data.bgColor
       }}
       onClick={handleSelectionChange}
     >
-      {data.name}
+      <p className="text-white">{data.name}</p>
+      <img src={data.img} alt="image" />
     </div>
   );
 }
