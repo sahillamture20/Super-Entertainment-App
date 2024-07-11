@@ -10,17 +10,17 @@ function Box({ data, selectedMovies, setSelectedMovies }) {
   }
 
   return (
-    <div className="flex flex-col p-1 m-1 w-40 h-36 rounded-xl"
+    <div
+      className={`flex flex-col p-1 m-1 w-36 h-32 rounded-xl ${
+        selectedMovies.includes(data.id) ? 'outline outline-customGreen' : ''
+      } box-border`}
       style={{
-        border: selectedMovies.includes(data.id)
-          ? "4px solid green"
-          : "",
-        backgroundColor: data.bgColor
+        backgroundColor: data.bgColor,
       }}
       onClick={handleSelectionChange}
     >
-      <p className="text-white">{data.name}</p>
-      <img src={data.img} alt="image" />
+      <p className="text-white pb-2 text-xl">{data.name}</p>
+      <img src={data.img} alt="image" className="object-cover" />
     </div>
   );
 }
