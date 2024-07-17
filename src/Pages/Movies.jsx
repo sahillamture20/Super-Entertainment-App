@@ -47,12 +47,12 @@ function Movies() {
 
   return (
     <div className="flex flex-row bg-black min-h-screen text-white items-center justify-around">
-      <div className="flex flex-col justify-end p-5 h-full bg-slate-500">
+      <div className="flex flex-col justify-end p-5 h-full">
         <div>
           <h2 className="text-green-400 text-3xl mb-7">Super App</h2>
           <h2 className="text-3xl font-semibold w-56 mb-7">Choose your entertainment category</h2>
         </div>
-        <div className="grid grid-cols-2 gap-3 w-60 h-10 mb-10">
+        <div className="grid grid-cols-2 gap-3 w-60 h-0 mb-10">
           {selectedMovies.map((data) => (
             <Chip
               key={data.id}
@@ -64,8 +64,8 @@ function Movies() {
           ))}
         </div>
         {showError && (
-          <div>
-            <p id="error" className="text-red-500">Minimum 3 categories required</p>
+          <div className="">
+            <p id="error" className="text-red-500 h-20 bg-red-400">Minimum 3 categories required</p>
           </div>
         )}
       </div>
