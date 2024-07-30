@@ -65,7 +65,7 @@ function Movies() {
         </div>
         {showError && (
           <div className="">
-            <p id="error" className="text-red-500 h-20 bg-red-400">Minimum 3 categories required</p>
+            <p id="error" className="text-red-500 h-20">Minimum 3 categories required</p>
           </div>
         )}
       </div>
