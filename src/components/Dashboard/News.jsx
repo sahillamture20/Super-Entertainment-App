@@ -20,7 +20,7 @@ const News = () => {
 
               // Replace with desired category
               // (e.g., 'sports', 'business', 'entertainment', 'health', 'science', 'politics', 'sports-football', 'sports-cricket', etc.)
-              category: "",
+              category: ""
             },
           }
         );
@@ -42,18 +42,19 @@ const News = () => {
   }
 
   return (
-    <div className="rounded-xl h-96 overflow-hidden mt-2">
-      <img
+    <div className="rounded-xl h-full overflow-hidden mt-2 flex-col">
+      <div className="object-cover w-full h-3/5">
+        <img
         src={newsItem.urlToImage}
-        className="object-cover w-full h-44"
         alt="News"
-      />
-      <div className="bg-white text-black text-sm p-2 overflow-y-auto max-h-54 rounded-b-xl">
-        <h2 className="text-base font-bold line-clamp-5">{newsItem.title}</h2>
-        <p className="text-xs line-clamp-5">{newsItem.description}</p>
-        <a href={newsItem.url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
+        />
+      </div>
+      <div className="bg-white text-black text-sm p-2 overflow-y-auto h-2/5 rounded-b-xl">
+        <h2 className="text-base font-bold">{newsItem.title}</h2>
+        <p className="text-xs">{newsItem.description}</p>
+        {/* <a href={newsItem.url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
           Read more
-        </a>
+        </a> */}
       </div>
     </div>
   );

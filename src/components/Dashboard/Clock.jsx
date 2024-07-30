@@ -11,9 +11,9 @@ const Clock = () => {
   const [remainingTime, setRemainingTime] = useState(null);
 
   const timerProps = {
-    strokeWidth: 6,
+    strokeWidth: 8,
     colors: "#FF6A6A",
-    size: 100,
+    size: 130,
   };
 
   useEffect(() => {
@@ -35,8 +35,8 @@ const Clock = () => {
     const seconds = remainingTime % 60;
 
     return (
-      <div className="flex flex-col items-center text-white">
-        <div className="text-lg">
+      <div className="flex flex-col items-center justify-center text-white">
+        <div className="text-xl">
           {hours}:{minutes}:{seconds}
         </div>
       </div>
@@ -44,7 +44,7 @@ const Clock = () => {
   };
 
   return (
-    <div className="absolute bg-[#1E2343] rounded-2xl w-7/12 flex justify-around p-2">
+    <div className="absolute bg-[#1E2343] rounded-2xl w-7/12 flex justify-around p-2 h-36">
       <div>
         <CountdownCircleTimer
           {...timerProps}
@@ -56,18 +56,18 @@ const Clock = () => {
           {remainingTime && children}
         </CountdownCircleTimer>
       </div>
-      <div className="flex flex-col justify-center gap-3">
+      <div className="flex flex-col justify-center items-center gap-3">
         <button
           className="cursor-pointer"
           onClick={() => setIsPlaying(!isPlaying)}
         >
-          <p className="text-white hover:underline decoration-[#FF6A6A]">{isPlaying ? "Pause" : "Start"}</p>
+          <p className="text-white hover:underline text-xl decoration-[#FF6A6A]">{isPlaying ? "Pause" : "Start"}</p>
         </button>
         <button
           className="cursor-pointer"
           onClick={() => setKey((prevKey) => prevKey + 1)}
         >
-          <p className="text-white hover:underline decoration-[#FF6A6A]">Restart</p>
+          <p className="text-white hover:underline text-xl decoration-[#FF6A6A]">Restart</p>
         </button>
         <button
           className="cursor-pointer hover:underline decoration-[#FF6A6A]"
@@ -78,10 +78,10 @@ const Clock = () => {
             setKey(0);
           }}
         >
-          <p className="text-white">Reset</p>
+          <p className="text-white text-xl">Reset</p>
         </button>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center text-xl">
         {[
           {
             label: "Hours",
@@ -110,7 +110,7 @@ const Clock = () => {
             >
               <img src={upArrow} alt="upArrow" className="h-2 mr-6"/>
             </button>
-            <span className="text-white text-sm mr-6">{value}</span>
+            <span className="text-white mr-6 text-xl font-bold">{value}</span>
             <button
               className="cursor-pointer"
               onClick={() => decreaseDuration(decrement)}

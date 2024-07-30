@@ -36,7 +36,7 @@ export default function Weather() {
   return (
     <div>
       {weatherData ? (
-        <div className="h-32 rounded-xl bg-[#101744] flex flex-col gap-y-3">
+        <div className="h-40 rounded-xl bg-[#101744] flex flex-col gap-y-3">
           <div className="bg-[#FF4ADE] rounded-tr-xl rounded-tl-xl text-center text-xl font-bold">
             <p>{weatherData.location.localtime}</p>
           </div>

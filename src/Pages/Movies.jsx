@@ -35,7 +35,7 @@ function Movies() {
     } else {
       localStorage.setItem("selectedMovies", JSON.stringify(selectedMovies));
       localStorage.setItem("allData", JSON.stringify(moviesData));
-      navigate("/browse");
+      navigate("/dashboard");
     }
   };
 

@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 export default function Dashboard() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white overflow-hidden p-3">
-      <div className="flex">
+    <div className="flex flex-col min-h-screen bg-black text-white overflow-hidden p-8">
+      <div className="flex gap-6">
         {/* Left Section: Profile, Weather, Notes, and Clock */}
-        <div className="flex flex-col w-8/12 gap-2 p-3">
-          <div className="flex flex-1 gap-3">
-            <div className="flex flex-col w-96 gap-2">
+        <div className="flex flex-col w-8/12 gap-6 p-3 h-full">
+          <div className="flex flex-1 gap-8">
+            <div className="flex flex-col w-96 gap-6">
               <UserInfo />
               <Weather />
             </div>
@@ -16,12 +16,12 @@ export default function Dashboard() {
               <Notes />
             </div>
           </div>
-          <div className="flex flex-1 justify-center">
+          <div className="flex flex-1">
             <Clock />
           </div>
         </div>
         {/* Right Section: News */}
-        <div className="flex flex-1">
+        <div className="flex flex-1 h-full">
           <News />
         </div>
       </div>

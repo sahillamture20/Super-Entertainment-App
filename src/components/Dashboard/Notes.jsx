@@ -16,12 +16,12 @@ const Notes = () => {
   }, [text]);
 
   return (
-    <div>
+    <div className='w-full'>
       <textarea
         ref={textareaRef}
-        rows={12}
-        cols={35}
-        className="text-black rounded-xl resize-none overflow-y-hidden bg-[#F1C75B] outline-none p-1"
+        rows={14}
+        cols={48}
+        className="text-black rounded-xl resize-none overflow-y-hidden bg-[#F1C75B] outline-none px-3 py-1"
         value={text}
         onChange={handleChange}
       />
